@@ -1,0 +1,10 @@
+# Listeners for the bundle
+services:
+    _defaults:
+        public: true
+
+    Jdwiese\ContaoEntitiesCoreBundle\EventListener\Schema\SchemaListener:
+        arguments:
+            - '@doctrine.orm.entity_manager'
+        tags:
+            - { name: "doctrine.event_listener", event: "postGenerateSchemaTable" }
