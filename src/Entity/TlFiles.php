@@ -54,7 +54,7 @@ class TlFiles
     /**
      * @var string|null
      *
-     * @ORM\Column(name="uuid", type="binary", nullable=true)
+     * @ORM\Column(name="uuid", type="binary", length=16, nullable=true, options={"fixed" = true})
      */
     private $uuid;
 
