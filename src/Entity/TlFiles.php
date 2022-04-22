@@ -40,7 +40,7 @@ class TlFiles
     /**
      * @var string|null
      *
-     * @ORM\Column(name="pid", type="binary", nullable=true)
+     * @ORM\Column(name="pid", type="binary_string", nullable=true)
      */
     private $pid;
 
@@ -54,7 +54,7 @@ class TlFiles
     /**
      * @var string|null
      *
-     * @ORM\Column(name="uuid", type="binary", length=16, nullable=true, options={"fixed" = true})
+     * @ORM\Column(name="uuid", type="binary_string", length=16, nullable=true, options={"fixed" = true})
      */
     private $uuid;
 

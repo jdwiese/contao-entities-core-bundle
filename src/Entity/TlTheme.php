@@ -62,7 +62,7 @@ class TlTheme
     /**
      * @var string|null
      *
-     * @ORM\Column(name="screenshot", type="binary", nullable=true)
+     * @ORM\Column(name="screenshot", type="binary_string", nullable=true)
      */
     private $screenshot;
 

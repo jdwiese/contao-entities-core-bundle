@@ -265,7 +265,7 @@ class TlModule
     /**
      * @var string|null
      *
-     * @ORM\Column(name="singleSRC", type="binary", nullable=true)
+     * @ORM\Column(name="singleSRC", type="binary_string", nullable=true)
      */
     private $singlesrc;
 
@@ -398,7 +398,7 @@ class TlModule
     /**
      * @var string|null
      *
-     * @ORM\Column(name="reg_homeDir", type="binary", nullable=true)
+     * @ORM\Column(name="reg_homeDir", type="binary_string", nullable=true)
      */
     private $regHomedir;
 

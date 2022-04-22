@@ -114,7 +114,7 @@ class TlContent
     /**
      * @var string|null
      *
-     * @ORM\Column(name="singleSRC", type="binary", nullable=true)
+     * @ORM\Column(name="singleSRC", type="binary_string", nullable=true)
      */
     private $singlesrc;
 
@@ -443,7 +443,7 @@ class TlContent
     /**
      * @var string|null
      *
-     * @ORM\Column(name="posterSRC", type="binary", nullable=true)
+     * @ORM\Column(name="posterSRC", type="binary_string", nullable=true)
      */
     private $postersrc;
 

@@ -276,7 +276,7 @@ class TlUser
     /**
      * @var string|null
      *
-     * @ORM\Column(name="secret", type="binary", nullable=true)
+     * @ORM\Column(name="secret", type="binary_string", nullable=true)
      */
     private $secret;
 

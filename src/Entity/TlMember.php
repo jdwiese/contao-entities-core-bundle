@@ -193,7 +193,7 @@ class TlMember
     /**
      * @var string|null
      *
-     * @ORM\Column(name="homeDir", type="binary", nullable=true)
+     * @ORM\Column(name="homeDir", type="binary_string", nullable=true)
      */
     private $homedir;
 
@@ -263,7 +263,7 @@ class TlMember
     /**
      * @var string|null
      *
-     * @ORM\Column(name="secret", type="binary", nullable=true)
+     * @ORM\Column(name="secret", type="binary_string", nullable=true)
      */
     private $secret;
 

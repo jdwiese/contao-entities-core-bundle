@@ -216,7 +216,7 @@ class TlFormField
     /**
      * @var string|null
      *
-     * @ORM\Column(name="uploadFolder", type="binary", nullable=true)
+     * @ORM\Column(name="uploadFolder", type="binary_string", nullable=true)
      */
     private $uploadfolder;
 
@@ -293,7 +293,7 @@ class TlFormField
     /**
      * @var string|null
      *
-     * @ORM\Column(name="singleSRC", type="binary", nullable=true)
+     * @ORM\Column(name="singleSRC", type="binary_string", nullable=true)
      */
     private $singlesrc;
 
