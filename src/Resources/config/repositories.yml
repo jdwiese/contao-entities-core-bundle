@@ -47,14 +47,9 @@ services:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    jdwiese.contao_entities.repository.member_group:
-        class: Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository
-        arguments:
-            - '@doctrine'
-
-    #Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository:
-    #    tags: ['doctrine.repository_service']
-    #    arguments: ['@doctrine']
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberRepository:
         tags: ['doctrine.repository_service']

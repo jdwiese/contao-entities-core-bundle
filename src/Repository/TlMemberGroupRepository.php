@@ -19,6 +19,8 @@ use Doctrine\Persistence\ManagerRegistry;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlMemberGroup;
 
 /**
+ * @template-extends ServiceEntityRepository<TlMemberGroup>
+
  * @method TlMemberGroup|null    find($id, $lockMode = null, $lockVersion = null)
  * @method TlMemberGroup|null    findOneBy(array $criteria, array $orderBy = null)
  * @method array|TlMemberGroup[] findAll()
