@@ -1,0 +1,123 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlArticleRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlContentRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCrawlQueueRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCronJobRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFilesRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormFieldRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeItemRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLayoutRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLogRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlModuleRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRelatedRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPageRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPreviewLinkRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlRememberMeRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchIndexRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchTermRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleSheetRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlThemeRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlTrustedDeviceRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUndoRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserGroupRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserRepository:
+        arguments:
+            - '@doctrine'
+
+    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlVersionRepository:
+        arguments:
+            - '@doctrine'
