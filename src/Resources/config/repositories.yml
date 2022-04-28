@@ -4,121 +4,121 @@ services:
         public: true
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlArticleRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlContentRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCrawlQueueRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCronJobRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFilesRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormFieldRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeItemRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLayoutRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLogRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlModuleRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRelatedRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPageRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPreviewLinkRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlRememberMeRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchIndexRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchTermRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleSheetRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlThemeRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlTrustedDeviceRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUndoRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserGroupRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlVersionRepository:
-        arguments:
-            - '@doctrine'
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
