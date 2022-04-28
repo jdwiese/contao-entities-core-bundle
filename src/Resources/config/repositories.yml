@@ -1,6 +1,7 @@
 services:
     _defaults:
         autoconfigure: true
+        public: true
 
     Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlArticleRepository:
         arguments:
