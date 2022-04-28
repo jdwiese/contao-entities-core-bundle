@@ -3,122 +3,122 @@ services:
         autoconfigure: true
         public: true
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlArticleRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlArticleRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlContentRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlContentRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCrawlQueueRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCrawlQueueRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlCronJobRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCronJobRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFilesRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFilesRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormFieldRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFormFieldRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlFormRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFormRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeItemRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlImageSizeItemRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlImageSizeRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlImageSizeRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLayoutRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlLayoutRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlLogRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlLogRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberGroupRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlMemberGroupRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlMemberRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlMemberRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlModuleRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlModuleRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRelatedRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlOptInRelatedRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlOptInRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlOptInRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPageRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlPageRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlPreviewLinkRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlPreviewLinkRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlRememberMeRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlRememberMeRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchIndexRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchIndexRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlSearchTermRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchTermRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlStyleRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlStyleSheetRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlStyleSheetRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlThemeRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlThemeRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlTrustedDeviceRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlTrustedDeviceRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUndoRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUndoRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserGroupRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUserGroupRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlUserRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUserRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
-    Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle\TlVersionRepository:
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlVersionRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
