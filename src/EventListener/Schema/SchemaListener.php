@@ -5,7 +5,12 @@ namespace Jdwiese\ContaoEntitiesCoreBundle\EventListener\Schema;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Event\GenerateSchemaTableEventArgs;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlCalendar;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlCalendarEvents;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlCalendarFeed;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlContent;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlFaq;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlFaqCategory;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlFiles;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlForm;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlFormField;
@@ -16,6 +21,9 @@ use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlLog;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlMember;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlMemberGroup;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlModule;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlNews;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlNewsArchive;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlNewsFeed;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlOptIn;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlOptInRelated;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlPage;
@@ -36,6 +44,11 @@ final class SchemaListener
     const SKIP_ENTITIES = [
         TlArticle::class,
         TlContent::class,
+        TlCalendar::class,
+        TlCalendarEvents::class,
+        TlCalendarFeed::class,
+        TlFaq::class,
+        TlFaqCategory::class,
         TlFiles::class,
         TlForm::class,
         TlFormField::class,
@@ -46,6 +59,9 @@ final class SchemaListener
         TlMember::class,
         TlMemberGroup::class,
         TlModule::class,
+        TlNews::class,
+        TlNewsArchive::class,
+        TlNewsFeed::class,
         TlOptIn::class,
         TlOptInRelated::class,
         TlPage::class,

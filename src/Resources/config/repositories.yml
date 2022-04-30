@@ -7,6 +7,18 @@ services:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCalendarEventsRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCalendarFeedRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCalendarRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
     Jdwiese\ContaoEntitiesCoreBundle\Repository\TlContentRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
@@ -16,6 +28,14 @@ services:
         arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCronJobRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFaqCategoryRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFaqRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 
@@ -56,6 +76,18 @@ services:
         arguments: ['@doctrine']
 
     Jdwiese\ContaoEntitiesCoreBundle\Repository\TlModuleRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlNewsArchiveRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlNewsFeedRepository:
+        tags: ['doctrine.repository_service']
+        arguments: ['@doctrine']
+
+    Jdwiese\ContaoEntitiesCoreBundle\Repository\TlNewsRepository:
         tags: ['doctrine.repository_service']
         arguments: ['@doctrine']
 

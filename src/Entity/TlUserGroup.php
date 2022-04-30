@@ -157,6 +157,76 @@ class TlUserGroup
      */
     private $stop = '';
 
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="calendarfeedp", type="blob", length=65535, nullable=true)
+     */
+    private $calendarfeedp;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="calendarfeeds", type="blob", length=65535, nullable=true)
+     */
+    private $calendarfeeds;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="calendarp", type="blob", length=65535, nullable=true)
+     */
+    private $calendarp;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="calendars", type="blob", length=65535, nullable=true)
+     */
+    private $calendars;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="newsfeedp", type="blob", length=65535, nullable=true)
+     */
+    private $newsfeedp;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="newsfeeds", type="blob", length=65535, nullable=true)
+     */
+    private $newsfeeds;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="newp", type="blob", length=65535, nullable=true)
+     */
+    private $newp;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="news", type="blob", length=65535, nullable=true)
+     */
+    private $news;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="faqp", type="blob", length=65535, nullable=true)
+     */
+    private $faqp;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="faqs", type="blob", length=65535, nullable=true)
+     */
+    private $faqs;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -375,6 +445,119 @@ class TlUserGroup
     {
         $this->stop = $stop;
 
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCalendarfeedp(): ?string
+    {
+        return $this->calendarfeedp;
+    }
+
+    public function setCalendarfeedp(?string $calendarfeedp): self
+    {
+        $this->calendarfeedp = $calendarfeedp;
+        return $this;
+    }
+
+    public function getCalendarfeeds(): ?string
+    {
+        return $this->calendarfeeds;
+    }
+
+    public function setCalendarfeeds(?string $calendarfeeds): self
+    {
+        $this->calendarfeeds = $calendarfeeds;
+        return $this;
+    }
+
+    public function getCalendarp(): ?string
+    {
+        return $this->calendarp;
+    }
+
+    public function setCalendarp(?string $calendarp): self
+    {
+        $this->calendarp = $calendarp;
+        return $this;
+    }
+
+    public function getCalendars(): ?string
+    {
+        return $this->calendars;
+    }
+
+    public function setCalendars(?string $calendars): self
+    {
+        $this->calendars = $calendars;
+        return $this;
+    }
+
+    public function getNewsfeedp(): ?string
+    {
+        return $this->newsfeedp;
+    }
+
+    public function setNewsfeedp(?string $newsfeedp): self
+    {
+        $this->newsfeedp = $newsfeedp;
+        return $this;
+    }
+
+    public function getNewsfeeds(): ?string
+    {
+        return $this->newsfeeds;
+    }
+
+    public function setNewsfeeds(?string $newsfeeds): self
+    {
+        $this->newsfeeds = $newsfeeds;
+        return $this;
+    }
+
+    public function getNewp(): ?string
+    {
+        return $this->newp;
+    }
+
+    public function setNewp(?string $newp): self
+    {
+        $this->newp = $newp;
+        return $this;
+    }
+
+    public function getNews(): ?string
+    {
+        return $this->news;
+    }
+
+    public function setNews(?string $news): self
+    {
+        $this->news = $news;
+        return $this;
+    }
+
+    public function getFaqp(): ?string
+    {
+        return $this->faqp;
+    }
+
+    public function setFaqp(?string $faqp): self
+    {
+        $this->faqp = $faqp;
+        return $this;
+    }
+
+    public function getFaqs(): ?string
+    {
+        return $this->faqs;
+    }
+
+    public function setFaqs(?string $faqs): self
+    {
+        $this->faqs = $faqs;
         return $this;
     }
 }

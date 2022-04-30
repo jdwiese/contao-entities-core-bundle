@@ -472,6 +472,181 @@ class TlModule
      */
     private $rootpagedependentmodules;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_featured", type="string", length=16, nullable=false, options={"default"="all_items"})
+     */
+    private $calFeatured = 'all_items';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_showQuantity", type="string", length=1, nullable=false, options={"fixed"=true})
+     */
+    private $calShowquantity = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_ctemplate", type="string", length=64, nullable=false)
+     */
+    private $calCtemplate = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_template", type="string", length=64, nullable=false)
+     */
+    private $calTemplate = '';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cal_limit", type="smallint", nullable=false, options={"unsigned"=true})
+     */
+    private $calLimit = '0';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cal_readerModule", type="integer", nullable=false, options={"unsigned"=true})
+     */
+    private $calReadermodule = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_order", type="string", length=16, nullable=false, options={"default"="ascending"})
+     */
+    private $calOrder = 'ascending';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_ignoreDynamic", type="string", length=1, nullable=false, options={"fixed"=true})
+     */
+    private $calIgnoredynamic = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_format", type="string", length=32, nullable=false, options={"default"="cal_month"})
+     */
+    private $calFormat = 'cal_month';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cal_startDay", type="smallint", nullable=false, options={"default"="1","unsigned"=true})
+     */
+    private $calStartday = '1';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_hideRunning", type="string", length=1, nullable=false, options={"fixed"=true})
+     */
+    private $calHiderunning = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cal_noSpan", type="string", length=1, nullable=false, options={"fixed"=true})
+     */
+    private $calNospan = '';
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="cal_calendar", type="blob", length=65535, nullable=true)
+     */
+    private $calCalendar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_showQuantity", type="string", length=1, nullable=false, options={"fixed"=true})
+     */
+    private $newsShowquantity = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_order", type="string", length=32, nullable=false, options={"default"="order_date_desc"})
+     */
+    private $newsOrder = 'order_date_desc';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="news_startDay", type="smallint", nullable=false, options={"unsigned"=true})
+     */
+    private $newsStartday = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_format", type="string", length=32, nullable=false, options={"default"="news_month"})
+     */
+    private $newsFormat = 'news_month';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_template", type="string", length=64, nullable=false)
+     */
+    private $newsTemplate = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_metaFields", type="string", length=255, nullable=false, options={"default"="a:2:{i:0;s:4:""date"";i:1;s:6:""author"";}"})
+     */
+    private $newsMetafields = 'a:2:{i:0;s:4:"date";i:1;s:6:"author";}';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="news_readerModule", type="integer", nullable=false, options={"unsigned"=true})
+     */
+    private $newsReadermodule = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_jumpToCurrent", type="string", length=16, nullable=false)
+     */
+    private $newsJumptocurrent = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="news_featured", type="string", length=16, nullable=false, options={"default"="all_items"})
+     */
+    private $newsFeatured = 'all_items';
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="news_archives", type="blob", length=65535, nullable=true)
+     */
+    private $newsArchives;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="faq_readerModule", type="integer", nullable=false, options={"unsigned"=true})
+     */
+    private $faqReadermodule = '0';
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="faq_categories", type="blob", length=65535, nullable=true)
+     */
+    private $faqCategories;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -1232,4 +1407,305 @@ class TlModule
 
         return $this;
     }
+
+    public function getCalFeatured(): string
+    {
+        return $this->calFeatured;
+    }
+
+    public function setCalFeatured(string $calFeatured): self
+    {
+        $this->calFeatured = $calFeatured;
+
+        return $this;
+    }
+
+    public function getCalShowquantity(): string
+    {
+        return $this->calShowquantity;
+    }
+
+    public function setCalShowquantity(string $calShowquantity): self
+    {
+        $this->calShowquantity = $calShowquantity;
+
+        return $this;
+    }
+
+    public function getCalCtemplate(): string
+    {
+        return $this->calCtemplate;
+    }
+
+    public function setCalCtemplate(string $calCtemplate): self
+    {
+        $this->calCtemplate = $calCtemplate;
+
+        return $this;
+    }
+
+    public function getCalTemplate(): string
+    {
+        return $this->calTemplate;
+    }
+
+    public function setCalTemplate(string $calTemplate): self
+    {
+        $this->calTemplate = $calTemplate;
+
+        return $this;
+    }
+
+    public function getCalLimit()
+    {
+        return $this->calLimit;
+    }
+
+    public function setCalLimit($calLimit): self
+    {
+        $this->calLimit = $calLimit;
+
+        return $this;
+    }
+
+    public function getCalReadermodule()
+    {
+        return $this->calReadermodule;
+    }
+
+    public function setCalReadermodule($calReadermodule): self
+    {
+        $this->calReadermodule = $calReadermodule;
+
+        return $this;
+    }
+
+    public function getCalOrder(): string
+    {
+        return $this->calOrder;
+    }
+
+    public function setCalOrder(string $calOrder): self
+    {
+        $this->calOrder = $calOrder;
+
+        return $this;
+    }
+
+    public function getCalIgnoredynamic(): string
+    {
+        return $this->calIgnoredynamic;
+    }
+
+    public function setCalIgnoredynamic(string $calIgnoredynamic): self
+    {
+        $this->calIgnoredynamic = $calIgnoredynamic;
+
+        return $this;
+    }
+
+    public function getCalFormat(): string
+    {
+        return $this->calFormat;
+    }
+
+    public function setCalFormat(string $calFormat): self
+    {
+        $this->calFormat = $calFormat;
+
+        return $this;
+    }
+
+    public function getCalStartday(): int
+    {
+        return $this->calStartday;
+    }
+
+    public function setCalStartday($calStartday): self
+    {
+        $this->calStartday = $calStartday;
+
+        return $this;
+    }
+
+    public function getCalHiderunning(): string
+    {
+        return $this->calHiderunning;
+    }
+
+    public function setCalHiderunning(string $calHiderunning): self
+    {
+        $this->calHiderunning = $calHiderunning;
+
+        return $this;
+    }
+
+    public function getCalNospan(): string
+    {
+        return $this->calNospan;
+    }
+
+    public function setCalNospan(string $calNospan): self
+    {
+        $this->calNospan = $calNospan;
+
+        return $this;
+    }
+
+    public function getCalCalendar(): ?string
+    {
+        return $this->calCalendar;
+    }
+
+    public function setCalCalendar(?string $calCalendar): self
+    {
+        $this->calCalendar = $calCalendar;
+
+        return $this;
+    }
+
+    public function getNewsShowquantity(): string
+    {
+        return $this->newsShowquantity;
+    }
+
+    public function setNewsShowquantity(string $newsShowquantity): self
+    {
+        $this->newsShowquantity = $newsShowquantity;
+
+        return $this;
+    }
+
+    public function getNewsOrder(): string
+    {
+        return $this->newsOrder;
+    }
+
+    public function setNewsOrder(string $newsOrder): self
+    {
+        $this->newsOrder = $newsOrder;
+
+        return $this;
+    }
+
+    public function getNewsStartday(): int
+    {
+        return $this->newsStartday;
+    }
+
+    public function setNewsStartday($newsStartday): self
+    {
+        $this->newsStartday = $newsStartday;
+
+        return $this;
+    }
+
+    public function getNewsFormat(): string
+    {
+        return $this->newsFormat;
+    }
+
+    public function setNewsFormat(string $newsFormat): self
+    {
+        $this->newsFormat = $newsFormat;
+
+        return $this;
+    }
+
+    public function getNewsTemplate(): string
+    {
+        return $this->newsTemplate;
+    }
+
+    public function setNewsTemplate(string $newsTemplate): self
+    {
+        $this->newsTemplate = $newsTemplate;
+
+        return $this;
+    }
+
+    public function getNewsMetafields(): string
+    {
+        return $this->newsMetafields;
+    }
+
+    public function setNewsMetafields(string $newsMetafields): self
+    {
+        $this->newsMetafields = $newsMetafields;
+
+        return $this;
+    }
+
+    public function getNewsReadermodule(): int
+    {
+        return $this->newsReadermodule;
+    }
+
+    public function setNewsReadermodule($newsReadermodule): self
+    {
+        $this->newsReadermodule = $newsReadermodule;
+
+        return $this;
+    }
+
+    public function getNewsJumptocurrent(): string
+    {
+        return $this->newsJumptocurrent;
+    }
+
+    public function setNewsJumptocurrent(string $newsJumptocurrent): self
+    {
+        $this->newsJumptocurrent = $newsJumptocurrent;
+
+        return $this;
+    }
+
+    public function getNewsFeatured(): string
+    {
+        return $this->newsFeatured;
+    }
+
+    public function setNewsFeatured(string $newsFeatured): self
+    {
+        $this->newsFeatured = $newsFeatured;
+
+        return $this;
+    }
+
+    public function getNewsArchives(): ?string
+    {
+        return $this->newsArchives;
+    }
+
+    public function setNewsArchives(?string $newsArchives): self
+    {
+        $this->newsArchives = $newsArchives;
+
+        return $this;
+    }
+
+    public function getFaqReadermodule(): int
+    {
+        return $this->faqReadermodule;
+    }
+
+    public function setFaqReadermodule($faqReadermodule): self
+    {
+        $this->faqReadermodule = $faqReadermodule;
+
+        return $this;
+    }
+
+    public function getFaqCategories(): ?string
+    {
+        return $this->faqCategories;
+    }
+
+    public function setFaqCategories(?string $faqCategories): self
+    {
+        $this->faqCategories = $faqCategories;
+
+        return $this;
+    }
+
 }

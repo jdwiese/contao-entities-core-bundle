@@ -283,6 +283,20 @@ class TlLayout
      */
     private $align = 'center';
 
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="calendarfeeds", type="blob", length=65535, nullable=true)
+     */
+    private $calendarfeeds;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="newsfeeds", type="blob", length=65535, nullable=true)
+     */
+    private $newsfeeds;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -719,4 +733,29 @@ class TlLayout
 
         return $this;
     }
+
+    public function getCalendarfeeds(): ?string
+    {
+        return $this->calendarfeeds;
+    }
+
+    public function setCalendarfeeds(?string $calendarfeeds): self
+    {
+        $this->calendarfeeds = $calendarfeeds;
+
+        return $this;
+    }
+
+    public function getNewsfeeds(): ?string
+    {
+        return $this->newsfeeds;
+    }
+
+    public function setNewsfeeds(?string $newsfeeds): self
+    {
+        $this->newsfeeds = $newsfeeds;
+
+        return $this;
+    }
+
 }
