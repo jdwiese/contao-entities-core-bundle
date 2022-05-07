@@ -4,6 +4,7 @@ namespace Jdwiese\ContaoEntitiesCoreBundle\EventListener\Schema;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Event\GenerateSchemaTableEventArgs;
+use Jdwiese\ContaoEntitiesCoreBundle\Entity\CalendarEvents;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlArticle;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlCalendar;
 use Jdwiese\ContaoEntitiesCoreBundle\Entity\TlCalendarEvents;
@@ -45,6 +46,7 @@ final class SchemaListener
         TlArticle::class,
         TlContent::class,
         TlCalendar::class,
+        CalendarEvents::class,
         TlCalendarEvents::class,
         TlCalendarFeed::class,
         TlFaq::class,
