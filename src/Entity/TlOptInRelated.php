@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlOptInRelated.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_opt_in_related", indexes={@ORM\Index(name="reltable_relid", columns={"relTable", "relId"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlOptInRelatedRepository")
  */
 class TlOptInRelated
 {

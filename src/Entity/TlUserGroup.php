@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlUserGroup.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_user_group")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUserGroupRepository")
  */
 class TlUserGroup
 {

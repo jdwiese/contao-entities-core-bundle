@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlFaqCategory
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_faq_category")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFaqCategoryRepository")
  */
 class TlFaqCategory
 {
@@ -105,5 +105,107 @@ class TlFaqCategory
      */
     private $disablecaptcha = '';
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
+    /**
+     * @return int
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHeadline(): string
+    {
+        return $this->headline;
+    }
+
+    /**
+     * @return int
+     */
+    public function getJumpto()
+    {
+        return $this->jumpto;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAllowcomments(): string
+    {
+        return $this->allowcomments;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNotify(): string
+    {
+        return $this->notify;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortorder(): string
+    {
+        return $this->sortorder;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPerpage()
+    {
+        return $this->perpage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModerate(): string
+    {
+        return $this->moderate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBbcode(): string
+    {
+        return $this->bbcode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRequirelogin(): string
+    {
+        return $this->requirelogin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisablecaptcha(): string
+    {
+        return $this->disablecaptcha;
+    }
 }

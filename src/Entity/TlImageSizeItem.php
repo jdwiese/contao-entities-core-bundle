@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlImageSizeItem.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_image_size_item", indexes={@ORM\Index(name="pid", columns={"pid"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlImageSizeItemRepository")
  */
 class TlImageSizeItem
 {

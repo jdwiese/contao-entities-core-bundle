@@ -17,12 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlSearchTerm.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_search_term", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="term", columns={"term"})
  * }, indexes={
  *     @ORM\Index(name="documentfrequency", columns={"documentFrequency"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchTermRepository")
  */
 class TlSearchTerm
 {

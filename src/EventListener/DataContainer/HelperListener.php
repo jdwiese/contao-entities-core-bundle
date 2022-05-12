@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Jdwiese\ContaoEntitiesCoreBundle\EventListener\DataContainer;
 
 use Contao\DataContainer;
+use Contao\StringUtil;
 use DateTime;
 
 class HelperListener
@@ -49,5 +50,16 @@ class HelperListener
             return DateTime::createFromFormat('H:i:s', $varValue)->getTimestamp();
         }
         return null;
+    }
+
+    public function saveArrayAsJson($varValue, object $dataContainer): ?string
+    {
+        $varValue = StringUtil::deserialize($varValue, true);
+        return json_encode($varValue);
+    }
+
+    public function loadArrayFromJson($varValue, DataContainer $dataContainer): array
+    {
+        return empty($varValue) ? [] : json_decode($varValue, true);
     }
 }

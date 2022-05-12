@@ -3,6 +3,6 @@ services:
         autoconfigure: true
 
     jdwiese.contao_entities.repository.member_group:
-        class: Jdwiese\ContaoEntitiesCoreBundle\Repository\TlMemberGroupRepository
+        class: Jdwiese\ContaoEntitiesCoreBundle\Repository\MemberGroupRepository
         arguments:
             - '@doctrine'

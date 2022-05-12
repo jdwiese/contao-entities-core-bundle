@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlMemberGroup.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_member_group", indexes={@ORM\Index(name="disable_start_stop", columns={"disable", "start", "stop"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlMemberGroupRepository")
  */
 class TlMemberGroup
 {

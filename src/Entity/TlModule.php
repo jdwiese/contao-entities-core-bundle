@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlModule.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_module")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlModuleRepository")
  */
 class TlModule
 {

@@ -17,6 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlFiles.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_files", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="uuid", columns={"uuid"})
  * }, indexes={
@@ -24,7 +25,6 @@ use Doctrine\ORM\Mapping as ORM;
  *     @ORM\Index(name="extension", columns={"extension"}),
  *     @ORM\Index(name="pid", columns={"pid"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFilesRepository")
  */
 class TlFiles
 {

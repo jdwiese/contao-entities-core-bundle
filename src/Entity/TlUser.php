@@ -17,12 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlUser.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_user", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="username", columns={"username"})
  * }, indexes={
  *     @ORM\Index(name="email", columns={"email"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUserRepository")
  */
 class TlUser
 {
@@ -584,7 +584,7 @@ class TlUser
         return $this;
     }
 
-    public function getGroups()
+    public function getGroups(): ?string
     {
         return $this->groups;
     }
@@ -608,7 +608,7 @@ class TlUser
         return $this;
     }
 
-    public function getModules()
+    public function getModules(): ?string
     {
         return $this->modules;
     }
@@ -620,7 +620,7 @@ class TlUser
         return $this;
     }
 
-    public function getThemes()
+    public function getThemes(): ?string
     {
         return $this->themes;
     }
@@ -632,7 +632,7 @@ class TlUser
         return $this;
     }
 
-    public function getElements()
+    public function getElements(): ?string
     {
         return $this->elements;
     }
@@ -644,7 +644,7 @@ class TlUser
         return $this;
     }
 
-    public function getFields()
+    public function getFields(): ?string
     {
         return $this->fields;
     }
@@ -656,7 +656,7 @@ class TlUser
         return $this;
     }
 
-    public function getPagemounts()
+    public function getPagemounts(): ?string
     {
         return $this->pagemounts;
     }
@@ -668,7 +668,7 @@ class TlUser
         return $this;
     }
 
-    public function getAlpty()
+    public function getAlpty(): ?string
     {
         return $this->alpty;
     }
@@ -680,7 +680,7 @@ class TlUser
         return $this;
     }
 
-    public function getFilemounts()
+    public function getFilemounts(): ?string
     {
         return $this->filemounts;
     }
@@ -692,7 +692,7 @@ class TlUser
         return $this;
     }
 
-    public function getFop()
+    public function getFop(): ?string
     {
         return $this->fop;
     }
@@ -704,7 +704,7 @@ class TlUser
         return $this;
     }
 
-    public function getImagesizes()
+    public function getImagesizes(): ?string
     {
         return $this->imagesizes;
     }
@@ -716,7 +716,7 @@ class TlUser
         return $this;
     }
 
-    public function getForms()
+    public function getForms(): ?string
     {
         return $this->forms;
     }
@@ -728,7 +728,7 @@ class TlUser
         return $this;
     }
 
-    public function getFormp()
+    public function getFormp(): ?string
     {
         return $this->formp;
     }
@@ -740,7 +740,7 @@ class TlUser
         return $this;
     }
 
-    public function getAmg()
+    public function getAmg(): ?string
     {
         return $this->amg;
     }
@@ -788,7 +788,7 @@ class TlUser
         return $this;
     }
 
-    public function getSession()
+    public function getSession(): ?string
     {
         return $this->session;
     }
@@ -812,7 +812,7 @@ class TlUser
         return $this;
     }
 
-    public function getSecret()
+    public function getSecret(): ?string
     {
         return $this->secret;
     }

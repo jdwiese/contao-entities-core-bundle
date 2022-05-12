@@ -18,7 +18,6 @@ use Doctrine\ORM\Mapping as ORM;
  * TlPreviewLink.
  *
  * @ORM\Table(name="tl_preview_link", indexes={@ORM\Index(name="id_published_expiresat", columns={"id", "published", "expiresAt"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlPreviewLinkRepository")
  */
 class TlPreviewLink
 {

@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlStyleSheet.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_style_sheet", uniqueConstraints={@ORM\UniqueConstraint(name="name", columns={"name"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlStyleSheetRepository")
  */
 class TlStyleSheet
 {
