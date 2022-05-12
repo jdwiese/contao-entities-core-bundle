@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlPage.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_page", indexes={@ORM\Index(name="pid_published_type_start_stop", columns={"pid", "published", "type", "start", "stop"}), @ORM\Index(name="alias", columns={"alias"}), @ORM\Index(name="type_dns", columns={"type", "dns"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlPageRepository")
  */
 class TlPage
 {

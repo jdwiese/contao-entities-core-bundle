@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlLayout.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_layout")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlLayoutRepository")
  */
 class TlLayout
 {
@@ -410,7 +410,7 @@ class TlLayout
         return $this;
     }
 
-    public function getSections()
+    public function getSections(): ?string
     {
         return $this->sections;
     }
@@ -434,7 +434,7 @@ class TlLayout
         return $this;
     }
 
-    public function getStylesheet()
+    public function getStylesheet(): ?string
     {
         return $this->stylesheet;
     }
@@ -446,7 +446,7 @@ class TlLayout
         return $this;
     }
 
-    public function getExternal()
+    public function getExternal(): ?string
     {
         return $this->external;
     }
@@ -482,7 +482,7 @@ class TlLayout
         return $this;
     }
 
-    public function getModules()
+    public function getModules(): ?string
     {
         return $this->modules;
     }
@@ -662,7 +662,7 @@ class TlLayout
         return $this;
     }
 
-    public function getExternaljs()
+    public function getExternaljs(): ?string
     {
         return $this->externaljs;
     }

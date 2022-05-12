@@ -17,12 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlVersion.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_version", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="pid_fromtable_version", columns={"pid", "fromTable", "version"})
  * }, indexes={
  *     @ORM\Index(name="userid", columns={"userid"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlVersionRepository")
  */
 class TlVersion
 {
@@ -218,7 +218,7 @@ class TlVersion
         return $this;
     }
 
-    public function getData()
+    public function getData(): ?string
     {
         return $this->data;
     }

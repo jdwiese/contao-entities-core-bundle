@@ -17,11 +17,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlSearch.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_search", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="url", columns={"url"}),
  *     @ORM\UniqueConstraint(name="checksum_pid", columns={"checksum", "pid"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchRepository")
  */
 class TlSearch
 {

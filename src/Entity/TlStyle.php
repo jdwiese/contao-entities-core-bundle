@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlStyle.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_style", indexes={@ORM\Index(name="pid", columns={"pid"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlStyleRepository")
  */
 class TlStyle
 {

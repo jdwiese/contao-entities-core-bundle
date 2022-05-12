@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlOptIn.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_opt_in", uniqueConstraints={@ORM\UniqueConstraint(name="token", columns={"token"})}, indexes={@ORM\Index(name="removeon", columns={"removeOn"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlOptInRepository")
  */
 class TlOptIn
 {

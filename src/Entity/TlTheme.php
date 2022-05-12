@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlTheme.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_theme")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlThemeRepository")
  */
 class TlTheme
 {
@@ -121,7 +121,7 @@ class TlTheme
         return $this;
     }
 
-    public function getFolders()
+    public function getFolders(): ?string
     {
         return $this->folders;
     }
@@ -133,7 +133,7 @@ class TlTheme
         return $this;
     }
 
-    public function getScreenshot()
+    public function getScreenshot(): ?string
     {
         return $this->screenshot;
     }

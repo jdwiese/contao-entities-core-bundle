@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlUndo.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_undo")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlUndoRepository")
  */
 class TlUndo
 {
@@ -145,7 +145,7 @@ class TlUndo
         return $this;
     }
 
-    public function getData()
+    public function getData(): ?string
     {
         return $this->data;
     }
@@ -157,7 +157,7 @@ class TlUndo
         return $this;
     }
 
-    public function getPreview()
+    public function getPreview(): ?string
     {
         return $this->preview;
     }

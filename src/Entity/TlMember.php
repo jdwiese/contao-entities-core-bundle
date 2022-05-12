@@ -17,13 +17,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlMember.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_member", uniqueConstraints={
  *     @ORM\UniqueConstraint(name="username", columns={"username"})
  * }, indexes={
  *     @ORM\Index(name="login_disable_start_stop", columns={"login", "disable", "start", "stop"}),
  *     @ORM\Index(name="email", columns={"email"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlMemberRepository")
  */
 class TlMember
 {
@@ -497,7 +497,7 @@ class TlMember
         return $this;
     }
 
-    public function getGroups()
+    public function getGroups(): ?string
     {
         return $this->groups;
     }
@@ -557,7 +557,7 @@ class TlMember
         return $this;
     }
 
-    public function getHomedir()
+    public function getHomedir(): ?string
     {
         return $this->homedir;
     }
@@ -665,7 +665,7 @@ class TlMember
         return $this;
     }
 
-    public function getSession()
+    public function getSession(): ?string
     {
         return $this->session;
     }
@@ -677,7 +677,7 @@ class TlMember
         return $this;
     }
 
-    public function getSecret()
+    public function getSecret(): ?string
     {
         return $this->secret;
     }

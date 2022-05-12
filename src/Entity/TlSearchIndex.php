@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlSearchIndex.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_search_index", indexes={@ORM\Index(name="pid", columns={"pid"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlSearchIndexRepository")
  */
 class TlSearchIndex
 {

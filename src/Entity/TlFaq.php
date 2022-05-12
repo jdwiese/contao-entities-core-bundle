@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlFaq
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_faq", indexes={@ORM\Index(name="pid_published", columns={"pid", "published"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFaqRepository")
  */
 class TlFaq
 {

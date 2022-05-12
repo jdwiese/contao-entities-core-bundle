@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Jdwiese\ContaoEntitiesCoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -7,8 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlNewsFeed
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_news_feed", indexes={@ORM\Index(name="alias", columns={"alias"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlNewsFeedRepository")
  */
 class TlNewsFeed
 {
@@ -98,5 +100,99 @@ class TlNewsFeed
      */
     private $imgsize = '';
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
+    /**
+     * @return int
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlias(): string
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage(): string
+    {
+        return $this->language;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getArchives(): ?string
+    {
+        return $this->archives;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFormat(): string
+    {
+        return $this->format;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxitems()
+    {
+        return $this->maxitems;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFeedbase(): string
+    {
+        return $this->feedbase;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImgsize(): string
+    {
+        return $this->imgsize;
+    }
 }

@@ -17,8 +17,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlArticle.
  *
- * @ORM\Table(name="tl_article", indexes={@ORM\Index(name="alias", columns={"alias"}), @ORM\Index(name="pid_published_incolumn_start_stop", columns={"pid", "published", "inColumn", "start", "stop"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlArticleRepository")
+ * @ORM\MappedSuperclass
+ * @ORM\Table(name="tl_article", indexes={
+ *     @ORM\Index(name="alias", columns={"alias"}),
+ *     @ORM\Index(name="pid_published_incolumn_start_stop", columns={"pid", "published", "inColumn", "start", "stop"})
+ * })
  */
 class TlArticle
 {

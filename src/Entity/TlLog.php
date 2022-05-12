@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlLog.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_log")
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlLogRepository")
  */
 class TlLog
 {

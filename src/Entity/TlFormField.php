@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlFormField.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_form_field", indexes={@ORM\Index(name="pid_invisible", columns={"pid", "invisible"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFormFieldRepository")
  */
 class TlFormField
 {

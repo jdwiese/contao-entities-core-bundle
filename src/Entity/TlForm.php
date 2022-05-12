@@ -17,8 +17,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlForm.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_form", indexes={@ORM\Index(name="alias", columns={"alias"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlFormRepository")
  */
 class TlForm
 {

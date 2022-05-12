@@ -7,11 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlCalendarEvents
  *
- * @ORM\Table(name="tl_calendar_events", indexes={
- *     @ORM\Index(name="alias", columns={"alias"}),
- *     @ORM\Index(name="pid_published_featured_start_stop", columns={"pid", "published", "featured", "start", "stop"})
- * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCalendarEventsRepository")
+ * @ORM\MappedSuperclass
+ * @ORM\Table(name="tl_calendar_events")
  */
 class TlCalendarEvents
 {
@@ -44,13 +41,6 @@ class TlCalendarEvents
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
      */
     private $title = '';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="featured", type="string", length=1, nullable=false, options={"fixed"=true})
-     */
-    private $featured = '';
 
     /**
      * @var string
@@ -107,13 +97,6 @@ class TlCalendarEvents
      * @ORM\Column(name="pageTitle", type="string", length=255, nullable=false)
      */
     private $pagetitle = '';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="robots", type="string", length=32, nullable=false)
-     */
-    private $robots = '';
 
     /**
      * @var string|null
@@ -332,5 +315,347 @@ class TlCalendarEvents
      */
     private $stop = '';
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
+    /**
+     * @return int
+     */
+    public function getPid()
+    {
+        return $this->pid;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlias(): string
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddtime(): string
+    {
+        return $this->addtime;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getStarttime(): ?int
+    {
+        return $this->starttime;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getEndtime(): ?int
+    {
+        return $this->endtime;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getStartdate(): ?int
+    {
+        return $this->startdate;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getEnddate(): ?int
+    {
+        return $this->enddate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPagetitle(): string
+    {
+        return $this->pagetitle;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocation(): string
+    {
+        return $this->location;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTeaser(): ?string
+    {
+        return $this->teaser;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddimage(): string
+    {
+        return $this->addimage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOverwritemeta(): string
+    {
+        return $this->overwritemeta;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSinglesrc(): ?string
+    {
+        return $this->singlesrc;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlt(): string
+    {
+        return $this->alt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImagetitle(): string
+    {
+        return $this->imagetitle;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSize(): string
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImagemargin(): string
+    {
+        return $this->imagemargin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageurl(): string
+    {
+        return $this->imageurl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFullsize(): string
+    {
+        return $this->fullsize;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCaption(): string
+    {
+        return $this->caption;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFloating(): string
+    {
+        return $this->floating;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRecurring(): string
+    {
+        return $this->recurring;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRepeateach(): string
+    {
+        return $this->repeateach;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRepeatend()
+    {
+        return $this->repeatend;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRecurrences()
+    {
+        return $this->recurrences;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddenclosure(): string
+    {
+        return $this->addenclosure;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getEnclosure(): ?string
+    {
+        return $this->enclosure;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @return int
+     */
+    public function getJumpto()
+    {
+        return $this->jumpto;
+    }
+
+    /**
+     * @return int
+     */
+    public function getArticleid()
+    {
+        return $this->articleid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTarget(): string
+    {
+        return $this->target;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCssclass(): string
+    {
+        return $this->cssclass;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNocomments(): string
+    {
+        return $this->nocomments;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublished(): string
+    {
+        return $this->published;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStart(): string
+    {
+        return $this->start;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStop(): string
+    {
+        return $this->stop;
+    }
 }

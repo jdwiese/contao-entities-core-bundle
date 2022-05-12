@@ -17,11 +17,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlContent.
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_content", indexes={
  *     @ORM\Index(name="pid_ptable_invisible_start_stop", columns={"pid", "ptable", "invisible", "start", "stop"}),
  *     @ORM\Index(name="type", columns={"type"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlContentRepository")
  */
 class TlContent
 {

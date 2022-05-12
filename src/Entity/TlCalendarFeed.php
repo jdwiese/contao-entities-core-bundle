@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlCalendarFeed
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_calendar_feed", indexes={@ORM\Index(name="alias", columns={"alias"})})
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlCalendarFeedRepository")
  */
 class TlCalendarFeed
 {
@@ -98,5 +98,99 @@ class TlCalendarFeed
      */
     private $imgsize = '';
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
+    /**
+     * @return int
+     */
+    public function getTstamp()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlias(): string
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage(): string
+    {
+        return $this->language;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCalendars(): ?string
+    {
+        return $this->calendars;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFormat(): string
+    {
+        return $this->format;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxitems()
+    {
+        return $this->maxitems;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFeedbase(): string
+    {
+        return $this->feedbase;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImgsize(): string
+    {
+        return $this->imgsize;
+    }
 }

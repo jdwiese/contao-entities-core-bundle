@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Jdwiese\ContaoEntitiesCoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -7,11 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * TlNews
  *
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="tl_news", indexes={
  *     @ORM\Index(name="alias", columns={"alias"}),
  *     @ORM\Index(name="pid_published_featured_start_stop", columns={"pid", "published", "featured", "start", "stop"})
  * })
- * @ORM\Entity(repositoryClass="Jdwiese\ContaoEntitiesCoreBundle\Repository\TlNewsRepository")
  */
 class TlNews
 {
