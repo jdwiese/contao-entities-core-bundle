@@ -22,7 +22,7 @@ class HelperListener
 
     public function saveDate($varValue, object $dataContainer): ?string
     {
-        if ($varValue !== '') {
+        if ((string)$varValue !== '') {
             return date('Y-m-d', $varValue);
         }
         return null;
